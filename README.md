@@ -7,20 +7,19 @@ It includes an HTML report setup with screenshots and URLs automatically embedde
 
 ## Project Structure
 
-.
-├── conftest.py # Pytest configuration and fixtures (Playwright, Percy, Reports)
-├── test_playwright.py # Example test cases with Percy snapshots
-├── pyproject.toml # Project dependencies and metadata
-├── pytest.ini # Pytest settings
-├── package.json # Node.js dependencies (for Percy CLI / Playwright install)
-├── package-lock.json
-├── requirements.lock
-├── requirements-dev.lock
-├── reports/ # Generated pytest-html reports
-├── screenshots/ # Failure screenshots (auto-created)
-├── node_modules/ # Node.js modules
-├── src/ # Python source code
-└── README.md
+- `conftest.py` ─ Pytest configuration and fixtures (Playwright, Percy, Reports)
+- `test_playwright.py` ─ Example test cases with Percy snapshots
+- `pyproject.toml` ─ Project dependencies and metadata
+- `pytest.ini` ─ Pytest settings
+- `package.json` ─ Node.js dependencies (for Percy CLI / Playwright install)
+- `package-lock.json`
+- `requirements.lock`
+- `requirements-dev.lock`
+- `reports/` ─ Generated pytest-html reports
+- `screenshots/` ─ Failure screenshots (auto-created)
+- `node_modules/` ─ Node.js modules
+- `src/` ─ Python source code
+- `README.md`
 
 
 ---
@@ -102,33 +101,27 @@ npx percy exec -- pytest --browser chromium
 After execution, Percy will provide a build link where you can review visual changes.
 ## Reports & Screenshots
 
-    HTML Report → stored in reports/report.html
-
-    Failure Screenshots → stored in screenshots/
-
-        Screenshots and page URLs are automatically embedded in the report on failure.
+- HTML Report → stored in reports/report.html
+- Failure Screenshots → stored in screenshots/
+    - Screenshots and page URLs are automatically embedded in the report on failure.
 
 ## Example Tests
 ### Passing Test (test_passed)
 
-    Navigates to Google
-
-    Takes a Percy snapshot
-
-    Asserts "Google" is in the page title
+- Navigates to Google
+- Takes a Percy snapshot
+- Asserts "Google" is in the page title
 
 ### Failing Test (test_failed)
 
-    Navigates to Google
+- Navigates to Google
 
-    Asserts "Bing" is in the page title (expected failure to demonstrate screenshot/report)
+- Asserts "Bing" is in the page title (expected failure to demonstrate screenshot/report)
 
 ## Notes
 
-    Default browser is Chromium.
-
-    Supported browsers: chromium, firefox, webkit.
-
-    HTML report is customized with project metadata and screenshots.
+- Default browser is Chromium.
+- Supported browsers: chromium, firefox, webkit.
+- HTML report is customized with project metadata and screenshots.
 
 ---
