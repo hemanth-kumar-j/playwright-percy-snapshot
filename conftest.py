@@ -79,12 +79,16 @@ def browser_context(browser_type, headless_mode):
 
         # Viewport setup
         if headless_mode:
-            context = browser_instance.new_context(viewport={"width": 1920, "height": 1080})
+            context = browser_instance.new_context(
+                viewport={"width": 1920, "height": 1080}
+            )
         else:
             context = (
                 browser_instance.new_context(no_viewport=True)
                 if browser_type == "chromium"
-                else browser_instance.new_context(viewport={"width": 1920, "height": 1080})
+                else browser_instance.new_context(
+                    viewport={"width": 1920, "height": 1080}
+                )
             )
 
         yield context

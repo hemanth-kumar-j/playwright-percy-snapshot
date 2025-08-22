@@ -115,7 +115,6 @@ After execution, Percy will provide a build link where you can review visual cha
 ### Failing Test (test_failed)
 
 - Navigates to Google
-
 - Asserts "Bing" is in the page title (expected failure to demonstrate screenshot/report)
 
 ## Notes
